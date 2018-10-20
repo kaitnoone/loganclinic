@@ -1,0 +1,59 @@
+.subscribe {
+  background: $color-rust;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+
+  .form--teaser {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    img {
+      max-height: 35px;
+      width: auto;
+      margin-right: 10px;
+    }
+
+    p {
+      text-transform: uppercase;
+      color: $color-white;
+      margin: 0;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+  }
+
+  .mc4wp-response {
+    position: absolute;
+    background: $color-cinnamon;
+    color: $color-white;
+    left: 0;
+    right: 0;
+    bottom: -50px;
+    text-align: center;
+  }
+
+  @include mq($break-sm) {
+    text-align: left;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .form--teaser {
+      margin: 0;
+      flex: 50%;
+      width: 50%;
+      max-width: 50%;
+    }
+  }
+
+  @include mq($break-lg) {
+    .container {
+      justify-content: space-around;
+    }
+  }
+}

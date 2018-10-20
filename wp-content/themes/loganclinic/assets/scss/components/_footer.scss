@@ -1,0 +1,60 @@
+/*------------------------------------------------------------------------------
+  Footer
+------------------------------------------------------------------------------*/
+
+.footer {
+  padding: 75px 0 105px;
+  background: $color-sand;
+
+  &--logo {
+    text-align: center;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &--social {
+    padding-top: 2em;
+
+    .footer--social_facebook {
+      svg {
+        fill: $color-facebook-blue;
+        display: block;
+      }
+    }
+  }
+
+  @include mq($break-sm) {
+    .container {
+      display: flex;
+      position: relative;
+    }
+
+    &--logo {
+      flex: 20%;
+      width: 20%;
+      max-width: 20%;
+    }
+
+    &--social {
+      position: absolute;
+      right: 10px;
+      bottom: 0;
+
+      a {
+        display: block;
+      }
+    }
+
+    &--widgets {
+      flex: 80%;
+      width: 80%;
+      max-width: 80%;
+      padding-left: 2em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}

@@ -1,0 +1,278 @@
+.menu-top-nav-container {
+  background: rgba($color-cinnamon, 0.95);
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+  height: 100vh;
+  left: -20rem;
+  padding: 6rem 2rem 2rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 20rem;
+  z-index: 1;
+
+  &.expanded {
+    left: 0;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu {
+    position: absolute;
+    top: 10%;
+    left: 2rem;
+    right: 2rem;
+
+    > li {
+      > span.text {
+        position: relative;
+        display: block;
+        text-transform: uppercase;
+
+        &:after {
+          display: block;
+          content: "";
+          background: $color-white;
+          height: 6px;
+          width: 60%;
+          position: absolute;
+          bottom: 0;
+          left: 10px;
+          //transform: skewX(-20deg);
+          transition: 0.2s ease-in-out all;
+          opacity: 0.5;
+        }
+
+        &:hover:after {
+          left: 0;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .sub-menu {
+    padding: 0 20px;
+    background: rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+  }
+
+  li {
+    position: relative;
+
+    + li {
+      margin-top: 1em;
+    }
+  }
+
+  a {
+    color: $color-white;
+    padding: 10px 0;
+    display: block;
+  }
+
+  @include mq($break-lg) {
+    position: relative;
+    top: -127px;
+    height: auto;
+    left: auto;
+    padding: 0;
+    background: transparent;
+    width: auto;
+    text-transform: none;
+    color: $color-rust;
+
+    .menu {
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+      top: auto;
+      position: static;
+
+      li + li {
+        margin: 0;
+
+        > span:before {
+          position: absolute;
+          left: -4px;
+          top: 19px;
+          content: "/";
+        }
+      }
+    }
+
+    li {
+      &.menu-item-has-children {
+        > .arrow {
+          position: absolute;
+          right: 15%;
+          top: 25px;
+          display: block;
+          height: 0;
+          width: 0;
+          border-top: 7px solid $color-cinnamon;
+          border-left: 7px solid transparent;
+          border-right: 7px solid transparent;
+        }
+      }
+
+      &.expanded {
+        .sub-menu {
+          max-height: 2000px;
+        }
+      }
+    }
+
+    a {
+      color: $color-rust;
+      transition: 0.2s ease-in-out all;
+      padding: 1em 2em;
+
+      &:hover,
+      &:active {
+        font-weight: 700;
+        transform: scale(1.1);
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+
+    .menu {
+      > li {
+        > span.text {
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .sub-menu {
+      max-height: 0;
+      overflow: hidden;
+      background: $color-cinnamon;
+      transition: 0.2s ease-in-out all;
+
+      a {
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.header--menu {
+  &.sticky {
+    .nav-toggle-wrap {
+      height: 65px;
+      position: fixed;
+      width: 100%;
+      background: rgba($color-cinnamon, 0.9);
+      left: 0;
+      right: 0;
+      top: 0;
+
+      .nav-toggle {
+        top: 1rem;
+        left: 50%;
+        margin-left: -25px;
+
+        .line,
+        .line::after,
+        .line::before {
+          background: $color-white;
+        }
+
+        &.expanded {
+          top: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.nav-toggle-wrap {
+  @include mq($break-lg) {
+    display: none;
+  }
+}
+
+.nav-toggle {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  height: 2rem;
+  left: 2rem;
+  position: fixed;
+  top: 2rem;
+  width: 3.2rem;
+  z-index: 2;
+  transition: 0.2s ease-in-out all;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  .line,
+  .line::after,
+  .line::before {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    background: $color-cinnamon;
+    content: "";
+    height: 0.4rem;
+    width: 100%;
+  }
+
+  .line {
+    margin-top: 0;
+
+    &::after {
+      margin-top: 0.8rem;
+    }
+    &::before {
+      margin-top: -0.8rem;
+    }
+  }
+
+  &.expanded {
+    left: 15rem;
+    transition: 0.2s ease-in-out all;
+
+    .line {
+      background: transparent;
+
+      &::after,
+      &::before {
+        background: white;
+        margin-top: 0;
+      }
+
+      &::after {
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+
+      &::before {
+        -ms-transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

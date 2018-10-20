@@ -1,0 +1,53 @@
+.container--left-image {
+  background: url("/wp-content/themes/loganclinic/assets/img/bg_texture2.jpg");
+  padding: 3em 0 2em;
+
+  .headline {
+    color: $color-white;
+  }
+
+  .image {
+    text-align: center;
+
+    img {
+      height: auto;
+      max-width: 100%;
+      margin: 20px 0;
+      box-shadow: 15px 15px 0 $color-tan;
+    }
+  }
+
+  .content {
+    color: $color-white;
+    line-height: 1.5;
+    text-align: justify;
+    padding: 2em;
+  }
+
+  @include mq($break-md) {
+    .wrap {
+      display: flex;
+    }
+
+    .image {
+      flex: 40%;
+      width: 40%;
+      max-width: 40%;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .content {
+      flex: 60%;
+      width: 60%;
+      max-width: 60%;
+      padding: 3em 0 0 2em;
+    }
+  }
+
+  @include mq($break-lg) {
+    padding-top: 5em;
+  }
+}

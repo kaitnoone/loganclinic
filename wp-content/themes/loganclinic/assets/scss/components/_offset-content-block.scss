@@ -1,0 +1,37 @@
+.offset-container {
+  background-size: cover;
+  background-repeat: none;
+
+  .content {
+    background: rgba($color-sand, 0.8);
+    padding: 2em;
+
+    ul {
+      line-height: 2;
+    }
+  }
+
+  @include mq($break-md) {
+    .content {
+      ul {
+        columns: 2;
+        list-style-position: inside;
+      }
+    }
+  }
+
+  @include mq($break-lg) {
+    .container {
+      position: relative;
+      height: 480px;
+    }
+
+    .content {
+      box-shadow: 5px 5px 5px rgba($color-rust, 0.2);
+      width: 80%;
+      position: absolute;
+      top: 50px;
+      right: 0;
+    }
+  }
+}

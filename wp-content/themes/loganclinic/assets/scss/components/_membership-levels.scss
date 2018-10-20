@@ -1,0 +1,56 @@
+.membership-levels {
+  background: url("/wp-content/themes/loganclinic/assets/img/sunset.jpg")
+    no-repeat;
+  background-size: cover;
+  padding: 2em 0;
+
+  .container {
+    position: relative;
+  }
+
+  .headline {
+    margin-bottom: 1em;
+  }
+
+  table {
+    border-bottom: 1px solid $color-rust;
+    width: 100%;
+
+    thead th {
+      background: $color-cinnamon;
+      color: $color-white;
+      text-align: left;
+      padding: 5px 10px;
+    }
+
+    tbody td {
+      border: 1px solid $color-rust;
+      border-bottom: 0;
+      padding: 5px 10px;
+      font-weight: 700;
+
+      + td {
+        border-left: 0;
+      }
+    }
+  }
+
+  .disclaimer {
+    background: $color-rust;
+    color: $color-white;
+    padding: 2em;
+  }
+
+  @include mq($break-md) {
+    table {
+      width: 50%;
+    }
+    .disclaimer {
+      position: absolute;
+      left: 48%;
+      bottom: 5%;
+      width: 50%;
+      padding-bottom: 3em;
+    }
+  }
+}

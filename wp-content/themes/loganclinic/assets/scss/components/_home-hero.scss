@@ -1,0 +1,40 @@
+.hero--home {
+  position: relative;
+  margin-top: -100px;
+
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 400px;
+  }
+  > .inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &_headline {
+    position: absolute;
+    top: 40%;
+
+    > span {
+      background: rgba($color-sand, 0.85);
+      line-height: 2;
+      padding: 10px 20px 10px 5px;
+    }
+  }
+  @include mq($break-md) {
+    &:before {
+      padding-top: (391 / 960) * 100%;
+    }
+
+    &_headline {
+      width: 900px;
+      max-width: 100%;
+      left: 8%;
+    }
+  }
+}

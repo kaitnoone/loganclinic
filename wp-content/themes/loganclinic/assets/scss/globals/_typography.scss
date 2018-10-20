@@ -1,0 +1,67 @@
+/*------------------------------------------------------------------------------
+  Typography
+------------------------------------------------------------------------------*/
+body {
+  color: $color-rust;
+}
+
+// Links
+a {
+  text-decoration: none;
+}
+
+// Headings
+h1 {
+  font-size: $ts-h1-mobile;
+  margin: 0;
+}
+h2 {
+  font-size: $ts-h2;
+  margin: 0;
+}
+h3 {
+  font-size: $ts-h3;
+  margin: 0;
+}
+h4 {
+  font-size: $ts-h4;
+  margin: 0;
+}
+h5 {
+  font-size: $ts-h5;
+  margin: 0;
+}
+h6 {
+  font-size: $ts-h6;
+  margin: 0;
+}
+
+@include mq($break-lg) {
+  h1 {
+    font-size: $ts-h1;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-specialty;
+  color: $color-rust;
+}
+
+h2 {
+  border-bottom: 1px solid $color-cinnamon;
+}
+
+h3 {
+  font-weight: 300;
+}
+
+.title {
+  font-size: $ts-h5;
+  font-family: $font-specialty;
+  background: $color-cinnamon;
+  color: $color-white;
+  padding: 15px 5px 5px;
+  line-height: 1;
+}
