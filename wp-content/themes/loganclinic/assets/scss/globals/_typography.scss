@@ -13,7 +13,9 @@ a {
 // Headings
 h1 {
   font-size: $ts-h1-mobile;
-  margin: 0;
+  margin: 0 0 0.5em;
+  text-transform: uppercase;
+  color: $color-cinnamon;
 }
 h2 {
   font-size: $ts-h2;
@@ -46,7 +48,6 @@ h1,
 h2,
 h3 {
   font-family: $font-specialty;
-  color: $color-rust;
 }
 
 h2 {
@@ -57,6 +58,12 @@ h3 {
   font-weight: 300;
 }
 
+p + h2,
+p + h3,
+p + h4 {
+  margin-top: 1em;
+}
+
 .title {
   font-size: $ts-h5;
   font-family: $font-specialty;
@@ -64,4 +71,18 @@ h3 {
   color: $color-white;
   padding: 15px 5px 5px;
   line-height: 1;
+}
+
+p,
+li {
+  a {
+    color: $color-rust;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+    }
+  }
 }

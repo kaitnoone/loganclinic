@@ -1,24 +1,37 @@
 .interior {
-  margin-top: -50px;
-  padding-bottom: 40px;
-
   .content {
-    padding-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 40px;
   }
 
   .sidebar {
     padding: 0 0 50px;
     position: relative;
-    background: url("/wp-content/themes/loganclinic/assets/img/sidebar_bg_2.jpg")
-      no-repeat;
+    background: url("/wp-content/themes/loganclinic/assets/img/otoscope.jpg")
+      no-repeat center center;
     background-size: cover;
+    position: relative;
+
+    &--overlay {
+      background: rgba(255, 255, 255, 0.7);
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+    }
 
     &--title {
       @extend .title;
+      position: relative;
+      z-index: 10;
     }
 
     &--content {
       padding: 20px;
+      position: relative;
+      z-index: 10;
     }
   }
 
@@ -29,8 +42,6 @@
   }
 
   @include mq($break-md) {
-    margin-top: -100px;
-
     &.two-col {
       display: flex;
       flex-wrap: wrap;
@@ -43,7 +54,7 @@
       }
 
       .sidebar {
-        padding: 70px 0 50px;
+        padding: 40px 0 50px;
         flex: 30%;
         width: 30%;
         max-width: 30%;

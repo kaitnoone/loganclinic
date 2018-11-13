@@ -73,11 +73,12 @@
     color: $color-white;
     padding: 10px 0;
     display: block;
+    text-decoration: none;
   }
 
   @include mq($break-lg) {
     position: relative;
-    top: -127px;
+    top: -85px;
     height: auto;
     left: auto;
     padding: 0;

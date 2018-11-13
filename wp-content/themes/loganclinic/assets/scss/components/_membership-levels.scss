@@ -4,6 +4,11 @@
   background-size: cover;
   padding: 2em 0;
 
+  &--interior {
+    background: transparent;
+    padding: 1em 0;
+  }
+
   .container {
     position: relative;
   }
@@ -39,6 +44,23 @@
     background: $color-rust;
     color: $color-white;
     padding: 2em;
+
+    a {
+      color: $color-white;
+      text-decoration: underline;
+    }
+  }
+
+  &--interior {
+    .disclaimer {
+      background: transparent;
+      color: $color-rust;
+      padding: 0;
+
+      a {
+        color: $color-rust;
+      }
+    }
   }
 
   @include mq($break-md) {
@@ -51,6 +73,15 @@
       bottom: 5%;
       width: 50%;
       padding-bottom: 3em;
+    }
+    &--interior {
+      .disclaimer {
+        position: static;
+        left: auto;
+        bottom: auto;
+        width: 100%;
+        padding-bottom: 0;
+      }
     }
   }
 }

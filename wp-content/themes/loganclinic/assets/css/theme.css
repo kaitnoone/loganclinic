@@ -645,31 +645,33 @@ a {
 
 h1 {
 	font-size: 2.4rem;
-	margin: 0;
+	margin: 0 0 0.5em;
+	text-transform: uppercase;
+	color: #bb553a;
 }
 
 h2 {
-	font-size: 2.8rem;
+	font-size: 2.2rem;
 	margin: 0;
 }
 
 h3 {
-	font-size: 2.5rem;
-	margin: 0;
-}
-
-h4 {
-	font-size: 2.1rem;
-	margin: 0;
-}
-
-h5 {
 	font-size: 1.9rem;
 	margin: 0;
 }
 
+h4 {
+	font-size: 1.6rem;
+	margin: 0;
+}
+
+h5 {
+	font-size: 1.3rem;
+	margin: 0;
+}
+
 h6 {
-	font-size: 1.7rem;
+	font-size: 0.9rem;
 	margin: 0;
 }
 
@@ -677,7 +679,6 @@ h1,
 h2,
 h3 {
 	font-family: "Special Elite", cursive;
-	color: #321d02;
 }
 
 h2 {
@@ -688,14 +689,35 @@ h3 {
 	font-weight: 300;
 }
 
+p + h2,
+p + h3,
+p + h4 {
+	margin-top: 1em;
+}
+
 .title,
 .interior .sidebar--title {
-	font-size: 1.9rem;
+	font-size: 1.3rem;
 	font-family: "Special Elite", cursive;
 	background: #bb553a;
 	color: #ffffff;
 	padding: 15px 5px 5px;
 	line-height: 1;
+}
+
+p a,
+li a {
+	color: #321d02;
+	text-decoration: underline;
+}
+
+p a:hover,
+p a:focus,
+p a:active,
+li a:hover,
+li a:focus,
+li a:active {
+	text-decoration: none;
 }
 
 /*------------------------------------------------------------------------------
@@ -872,6 +894,11 @@ a img.aligncenter {
 	background: #fff7d9;
 }
 
+.footer a {
+	color: #321d02;
+	text-decoration: underline;
+}
+
 .footer--logo {
 	text-align: center;
 }
@@ -906,7 +933,7 @@ header {
 
 .header--pattern-wrap {
 	background: url("/wp-content/themes/loganclinic/assets/img/header-bg.jpg") repeat-x;
-	height: 300px;
+	height: 250px;
 	padding-top: 70px;
 	-webkit-clip-path: polygon(0 0, 100% 0, 100% 89%, 0% 100%);
 	clip-path: polygon(0 0, 100% 0, 100% 89%, 0% 100%);
@@ -930,7 +957,7 @@ header {
 
 .header--logo {
 	margin: 20px auto;
-	max-width: 205px;
+	max-width: 155px;
 }
 
 .header--logo img {
@@ -947,6 +974,11 @@ header {
 	font-weight: 700;
 	width: 250px;
 	padding: 1em 2em;
+	text-align: center;
+}
+
+.header--contact-info a {
+	color: #ffffff;
 }
 
 .hero--home {
@@ -972,12 +1004,21 @@ header {
 .hero--home_headline {
 	position: absolute;
 	top: 40%;
+	color: #321d02;
 }
 
 .hero--home_headline > span {
 	background: rgba(255, 247, 217, 0.85);
 	line-height: 2;
 	padding: 10px 20px 10px 5px;
+}
+
+.hero--interior {
+	margin-top: -100px;
+	height: 300px;
+	background-repeat: none;
+	background-size: cover;
+	background-position: center center;
 }
 
 .container--left-image {
@@ -1012,6 +1053,11 @@ header {
 	background: url("/wp-content/themes/loganclinic/assets/img/sunset.jpg") no-repeat;
 	background-size: cover;
 	padding: 2em 0;
+}
+
+.membership-levels--interior {
+	background: transparent;
+	padding: 1em 0;
 }
 
 .membership-levels .container {
@@ -1049,6 +1095,21 @@ header {
 	background: #321d02;
 	color: #ffffff;
 	padding: 2em;
+}
+
+.membership-levels .disclaimer a {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.membership-levels--interior .disclaimer {
+	background: transparent;
+	color: #321d02;
+	padding: 0;
+}
+
+.membership-levels--interior .disclaimer a {
+	color: #321d02;
 }
 
 .menu-top-nav-container {
@@ -1126,6 +1187,7 @@ header {
 	color: #ffffff;
 	padding: 10px 0;
 	display: block;
+	text-decoration: none;
 }
 
 .header--menu.sticky .nav-toggle-wrap {
@@ -1245,6 +1307,10 @@ header {
 
 .offset-container .content ul {
 	line-height: 2;
+}
+
+.provider + .provider {
+	margin-top: 2em;
 }
 
 /*----------------------------------------------------------------------------
@@ -1387,24 +1453,38 @@ header {
 	text-align: center;
 }
 
-.interior {
-	margin-top: -50px;
-	padding-bottom: 40px;
-}
-
 .interior .content {
-	padding-top: 100px;
+	padding-top: 50px;
+	padding-bottom: 40px;
 }
 
 .interior .sidebar {
 	padding: 0 0 50px;
 	position: relative;
-	background: url("/wp-content/themes/loganclinic/assets/img/sidebar_bg_2.jpg") no-repeat;
+	background: url("/wp-content/themes/loganclinic/assets/img/otoscope.jpg") no-repeat center center;
 	background-size: cover;
+	position: relative;
+}
+
+.interior .sidebar--overlay {
+	background: rgba(255, 255, 255, 0.7);
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+}
+
+.interior .sidebar--title {
+	position: relative;
+	z-index: 10;
 }
 
 .interior .sidebar--content {
 	padding: 20px;
+	position: relative;
+	z-index: 10;
 }
 
 .interior.one-col .sidebar {
@@ -1414,6 +1494,10 @@ header {
 /*----------------------------------------------------------------------------
   Plugin Overrides
 ----------------------------------------------------------------------------*/
+
+.everest-forms {
+	margin-bottom: 2em;
+}
 
 @media (min-width: 600px) {
 
@@ -1465,6 +1549,26 @@ header {
 	-webkit-justify-content: space-between;
 	-ms-flex-pack: justify;
 	justify-content: space-between;
+}
+
+.provider {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.provider .image {
+	width: 40%;
+}
+
+.provider .info {
+	padding-left: 1.5em;
+	width: 60%;
+}
+
+.provider .info p:first-child {
+	margin-top: 0;
 }
 
 .subscribe {
@@ -1552,14 +1656,18 @@ header {
 	padding-bottom: 3em;
 }
 
+.membership-levels--interior .disclaimer {
+	position: static;
+	left: auto;
+	bottom: auto;
+	width: 100%;
+	padding-bottom: 0;
+}
+
 .offset-container .content ul {
 	-webkit-columns: 2;
 	columns: 2;
 	list-style-position: inside;
-}
-
-.interior {
-	margin-top: -100px;
 }
 
 .interior.two-col {
@@ -1583,7 +1691,7 @@ header {
 }
 
 .interior.two-col .sidebar {
-	padding: 70px 0 50px;
+	padding: 40px 0 50px;
 	-webkit-box-flex: 30%;
 	-webkit-flex: 30%;
 	-ms-flex: 30%;
@@ -1600,6 +1708,10 @@ h1 {
 	font-size: 3.1rem;
 }
 
+.header--pattern-wrap {
+	height: 200px;
+}
+
 .header--logo {
 	margin: 0;
 }
@@ -1614,7 +1726,7 @@ h1 {
 
 .menu-top-nav-container {
 	position: relative;
-	top: -127px;
+	top: -85px;
 	height: auto;
 	left: auto;
 	padding: 0;

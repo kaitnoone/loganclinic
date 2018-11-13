@@ -6,6 +6,11 @@
   padding: 75px 0 105px;
   background: $color-sand;
 
+  a {
+    color: $color-rust;
+    text-decoration: underline;
+  }
+
   &--logo {
     text-align: center;
 
