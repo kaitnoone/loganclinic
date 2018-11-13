@@ -28,7 +28,8 @@ get_header();
 	<div class="container">
         <h2 class="cta--title"><?php the_field('cta_headline');?></h2>
         <div class="cta--content"><?php the_field('cta_content');?></div>
-        <a class="button" href="<?php the_field('cta_link');?>"><?php the_field('cta_link_label');?></a>
+        <a class="button" href="/about">Learn More</a>
+
     </div>
 </div>
 
