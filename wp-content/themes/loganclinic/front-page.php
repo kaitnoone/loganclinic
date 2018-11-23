@@ -47,7 +47,7 @@ get_header();
         <h3 class="headline"><?php the_field('image-left-headline');?></h3>
         <div class="wrap">
             <div class="image">
-                <img src="<?php the_field('image-left-image');?>" alt="<?php the_field('image-left-alt');?>" />
+                <img src="<?php the_field('image-left-image');?>" alt="<?php the_field('image-alt-text');?>" />
             </div>
             <div class="content"><?php the_field('image-left-content');?></div>
         </div>
