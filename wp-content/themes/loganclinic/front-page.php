@@ -7,7 +7,7 @@
 get_header();
 ?>
 
-<div class="hero--home" style="background-image: url('<?php the_field(" home_hero_image");?>')">
+<div class="hero--home" style="background-image: url('<?php the_field('home_hero_image');?>' )">
     <h1 class="hero--home_headline"><span>
             <?php the_field('home_hero_headline');?></span></h1>
 </div>
