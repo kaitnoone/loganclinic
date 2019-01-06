@@ -1,0 +1,18 @@
+.video--full-width {
+    background: $color-black;
+    padding: 60px 0 30px;
+    text-align: center;
+
+    h3 {
+        color: $color-white;
+        border-bottom: 2px solid $color-white;
+    }
+
+    .video {
+        border-bottom: 2px solid $color-white;
+    }
+
+    iframe {
+        display: block;
+    }
+}

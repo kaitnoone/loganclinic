@@ -1453,6 +1453,25 @@ header {
 	text-align: center;
 }
 
+.video--full-width {
+	background: #000000;
+	padding: 60px 0 30px;
+	text-align: center;
+}
+
+.video--full-width h3 {
+	color: #ffffff;
+	border-bottom: 2px solid #ffffff;
+}
+
+.video--full-width .video {
+	border-bottom: 2px solid #ffffff;
+}
+
+.video--full-width iframe {
+	display: block;
+}
+
 .interior .content {
 	padding-top: 50px;
 	padding-bottom: 40px;
