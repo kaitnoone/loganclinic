@@ -6,7 +6,7 @@
  */
 get_header();
 ?>
-<div class="hero--interior" style="background-image: url('<?php the_field(" interior_hero_image");?>')"></div>
+<div class="hero--interior" style="background-image: url('<?php the_field("interior_hero_image");?>')"></div>
 <?php if (get_field('sidebar_headline')): ?>
 <div class="container interior two-col">
     <?php else: ?>
@@ -76,7 +76,8 @@ get_header();
                     <?php the_field('intro_text');?>
                 </div>
                 <div class="provider">
-                    <div class="image"><img src="<?php the_field('staff_1_photo');?>" alt="<?php the_field('staff_1_name');?>" /></div>
+                    <div class="image"><img src="<?php the_field('staff_1_photo');?>"
+                            alt="<?php the_field('staff_1_name');?>" /></div>
                     <div class="info">
                         <p><strong>
                                 <?php the_field('staff_1_name');?></strong></p>
@@ -86,7 +87,8 @@ get_header();
                     </div>
                 </div>
                 <div class="provider">
-                    <div class="image"><img src="<?php the_field('staff_2_photo');?>" alt="<?php the_field('staff_2_name');?>" /></div>
+                    <div class="image"><img src="<?php the_field('staff_2_photo');?>"
+                            alt="<?php the_field('staff_2_name');?>" /></div>
                     <div class="info">
                         <p><strong>
                                 <?php the_field('staff_2_name');?></strong></p>
@@ -96,7 +98,8 @@ get_header();
                     </div>
                 </div>
                 <div class="provider">
-                    <div class="image"><img src="<?php the_field('staff_3_photo');?>" alt="<?php the_field('staff_2_name');?>" /></div>
+                    <div class="image"><img src="<?php the_field('staff_3_photo');?>"
+                            alt="<?php the_field('staff_2_name');?>" /></div>
                     <div class="info">
                         <p><strong>
                                 <?php the_field('staff_3_name');?></strong></p>

@@ -34,7 +34,6 @@ get_header();
             <?php the_field('cta_content');?>
         </div>
         <a class="button" href="/about">Learn More</a>
-
     </div>
 </div>
 
@@ -54,7 +53,8 @@ get_header();
         <div class="wrap">
             <h3>Patient Care</h3>
             <div class="video">
-                <iframe width="100%" height="500" src="<?php the_field('video_embed_link');?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                <iframe width="100%" height="500" src="<?php the_field('video_embed_link');?>" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
         </div>

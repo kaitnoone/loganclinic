@@ -26,7 +26,7 @@ define('DB_NAME', 'db225516_loganclinic');
 define('DB_USER', 'db225516_knoone');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'Db225516_knoone');
+define('DB_PASSWORD', 'Pickle1973!');
 
 /** MySQL hostname */
 define('DB_HOST', $_ENV{DATABASE_SERVER});
